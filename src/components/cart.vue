@@ -19,7 +19,10 @@ export default {
     }
 }
 </script>
-
+.main {
+    height: 100%;
+    padding-top: 40px;
+}
 <style>
 
 </style>

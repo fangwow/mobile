@@ -21,5 +21,8 @@ export default {
 </script>
 
 <style>
-
+.main {
+    height: 100%;
+    padding-top: 40px;
+}
 </style>

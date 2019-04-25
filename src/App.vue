@@ -3,7 +3,9 @@
     <!-- 顶部固定导航栏 -->
     <mt-header fixed title="小桃微集"></mt-header>
     <!-- 中间部分 -->
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
     <!-- 底部tab栏 -->
     <nav class="mui-bar mui-bar-tab">
         <router-link class="mui-tab-item" to="/home">
@@ -37,5 +39,19 @@ export default {
 </script>
 
 <style>
-
+  #app {
+    overflow-x: hidden;
+  }
+  .v-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .v-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  .v-enter-active, .v-leave-active {
+    transition: all 0.3s;
+  }
 </style>
