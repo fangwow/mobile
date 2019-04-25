@@ -5,6 +5,7 @@ import Class from '@/components/class.vue'
 import Chat from '@/components/chat.vue'
 import Cart from '@/components/cart.vue'
 import Contact from '@/components/contact.vue'
+import NewList from '@/components/newList.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -39,6 +40,11 @@ export default new Router({
       name: 'contact',
       path: '/contact',
       component: Contact
+    },
+    {
+      name: 'newList',
+      path: '/home/newList',
+      component: NewList
     }
   ]
 })
