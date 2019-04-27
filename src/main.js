@@ -14,6 +14,9 @@ Vue.component(Header.name, Header);
 import { Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+// 表单
+import { Field } from 'mint-ui';
+Vue.component(Field.name, Field);
 // 导入axios
 import axios from 'axios'
 Vue.prototype.$http = axios;

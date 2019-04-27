@@ -33,18 +33,20 @@
              门色号有is a habit、beachwood。
             </p> 
         </div>
+        <comment></comment>
     </div>
 </template>
 
 <script>
+import comment from '@/components/comment.vue'
 export default {
     data(){
         return {
 
         }
     },
-    created(){
-       
+    components: {
+        comment
     },
     methods: {
         

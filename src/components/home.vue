@@ -52,7 +52,8 @@ export default {
     data(){
         return {
             // 轮播图数组
-            lunboList: []
+            lunboList: [],
+            value: '请输入要搜索内容'
         }
     },
     created(){
