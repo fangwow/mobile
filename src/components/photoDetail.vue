@@ -8,10 +8,13 @@
         <hr>
         <div class="content" v-html='photoInfo.content'>
         </div>
+        <comment :id='this.$route.params.id'></comment>
     </div>
 </template>
 
 <script>
+// 导入评论子组件
+import comment from '@/components/comment.vue';
 export default {
     data(){
         return {
