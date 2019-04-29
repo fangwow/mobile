@@ -22,9 +22,9 @@ Vue.component(Field.name, Field);
 import axios from 'axios'
 Vue.prototype.$http = axios;
 // 导入mui
-import '@/assets/dist/js/mui.min.js'
 import '@/assets/dist/css/mui.min.css'
 import '@/assets/dist/css/icons-extra.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

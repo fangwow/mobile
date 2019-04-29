@@ -91,5 +91,4 @@ export default {
 .mui-table-view img {
     width: 100px;
 }
-
 </style>
