@@ -17,7 +17,9 @@ Vue.component(SwipeItem.name, SwipeItem);
 // 表单
 import { Field } from 'mint-ui';
 Vue.component(Field.name, Field);
-
+// 图片懒加载
+import { Lazyload } from 'mint-ui';
+Vue.use(Lazyload);
 // 导入axios
 import axios from 'axios'
 Vue.prototype.$http = axios;

@@ -24,6 +24,11 @@
                 </div>
             </div>
 		</div>
+        <ul>
+            <li v-for="item in list" :key='item.id'>
+                <img v-lazy="item.img_url">
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -32,16 +37,25 @@ import '@/assets/dist/js/mui.min.js'
 export default {
     data(){
         return {
-            cate: []
+            cate: [],
+            list: []
         }
+    },
+    created(){
+        this.getAllCategory();
+        this.getPhotoList(0);
     },
     mounted(){
         mui('.mui-scroll-wrapper').scroll({
             deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
         });
-        this.getAllCategory();
     },
     methods: {
+        // 获取图片列表
+        async getPhotoList(cateId){
+            const res = await this.$http.get(`api/getimages/${cateId}`);
+            this.list = res.data.data;
+        },
         // 获取分类数据
         async getAllCategory(){
             const res = await this.$http.get(`api/getimgcategory`);
@@ -60,5 +74,10 @@ export default {
 <style scoped>
 .main {
     padding-top: 40px;
+}
+img[lazy=loading] {
+  width: 40px;
+  height: 300px;
+  margin: auto;
 }
 </style>
