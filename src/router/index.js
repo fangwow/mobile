@@ -8,6 +8,7 @@ import Contact from '@/components/contact.vue'
 import NewList from '@/components/newList.vue'
 import Detial from '@/components/detail.vue'
 import PhotoList from '@/components/photoList.vue'
+import PhotoDetail from '@/components/photoDetail.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -56,6 +57,11 @@ export default new Router({
       name: 'photoList',
       path: '/home/photoList',
       component: PhotoList
+    },
+    {
+      name: 'photoDetail',
+      path: '/home/photoList/:id',
+      component: PhotoDetail
     }
   ]
 })
